@@ -8,7 +8,7 @@ instantiation to subclasses.
 ### Pizza Store:
 Suppose we have a Pizza Chain with many pizza stores which make different
 styles of pizza. In this example we use the Factory Method Pattern for creating
-and order for a pizza.
+an order for a pizza.
 
 There are three Pizza Stores, NYPizzaStore, ChicagoPizzaStore, and 
 CaliforniaPizzaStore, which all make their own style of pizza. The Factory Method

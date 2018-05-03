@@ -1,7 +1,7 @@
 <?php
 
 namespace FactoryMethod;
-include_once 'PizzaStore.php';
+include_once 'PizzaStoreFactoryMethod.php';
 
 class PizzaTestDrive
 {
