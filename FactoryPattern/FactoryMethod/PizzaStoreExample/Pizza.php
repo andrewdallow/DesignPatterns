@@ -1,24 +1,8 @@
 <?php
-/**
- * Short description for file
- *
- * Long description for file (if any)...
- *
- * LICENSE: Some license information
- *
- * @category   Zend
- * @package    Zend_FactoryMethod
- * @subpackage Pizza
- * @copyright  Copyright (c) 2018 ecommistry (http://www.ecommistry.com)
- * @license    http://framework.zend.com/license   BSD License
- * @version    1.0
- * @link       http://framework.zend.com/package/PackageName
- * @since      File available since Release 1.0
- */
-
 namespace FactoryMethod;
-
-
+/**
+ * The Product: Abstract class representing how to make a pizza.
+ */
 abstract class Pizza
 {
     /** @var string */
@@ -63,6 +47,9 @@ abstract class Pizza
 
 }
 
+/**
+ * Concrete Product representing a NY Style Cheese Pizza.
+ */
 class NYStyleCheesePizza extends Pizza
 {
     public function __construct()
@@ -76,6 +63,9 @@ class NYStyleCheesePizza extends Pizza
 
 }
 
+/**
+ * Concrete Product representing a Chicago Style Cheese Pizza
+ */
 class ChicagoStyleCheesePizza extends Pizza
 {
     public function __construct()

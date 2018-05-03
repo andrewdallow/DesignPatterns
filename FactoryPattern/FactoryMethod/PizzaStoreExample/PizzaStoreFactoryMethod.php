@@ -1,28 +1,29 @@
 <?php
-/**
- * Short description for file
- *
- * Long description for file (if any)...
- *
- * LICENSE: Some license information
- *
- * @category   Zend
- * @package    Zend_PizzaStore
- * @copyright  Copyright (c) 2018 ecommistry (http://www.ecommistry.com)
- * @license    http://framework.zend.com/license   BSD License
- * @version    1.0
- * @link       http://framework.zend.com/package/PackageName
- * @since      File available since Release 1.0
- */
-
 namespace FactoryMethod;
 
 require_once 'Pizza.php';
 
+/**
+ * The Creator Class: Abstract Factory Method representing a Pizza Store
+ */
 abstract class PizzaStore
 {
+    /**
+     * Create the Pizza Object for a chosen pizza type
+     *
+     * @param string $type
+     *
+     * @return \FactoryMethod\Pizza
+     */
     abstract public function createPizza(string $type): Pizza;
 
+    /**
+     * Order the Pizza.
+     *
+     * @param string $type
+     *
+     * @return \FactoryMethod\Pizza
+     */
     public function orderPizza(string $type): Pizza
     {
         $pizza = $this->createPizza($type);
@@ -37,6 +38,9 @@ abstract class PizzaStore
 
 }
 
+/**
+ * The Concrete Creator class of the NY Pizza Store
+ */
 class NYPizzaStore extends PizzaStore
 {
     public function createPizza(string $type): Pizza
@@ -56,6 +60,9 @@ class NYPizzaStore extends PizzaStore
     }
 }
 
+/**
+ * The Concrete Creator class of the Chicago Pizza Store
+ */
 class ChicagoPizzaStore extends PizzaStore
 {
     public function createPizza(string $type): Pizza
@@ -75,6 +82,9 @@ class ChicagoPizzaStore extends PizzaStore
     }
 }
 
+/**
+ * The Concrete Creator class of the California Pizza Store
+ */
 class CaliforniaPizzaStore extends PizzaStore
 {
 
