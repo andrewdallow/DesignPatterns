@@ -7,7 +7,7 @@ automatically.
 
 ### Advantages
 * Has loose coupling between objects interacting objects
-* Can send data between objects without any changes in Subject or Observer
+* Can send data between objects without any changes in Subject or Observer class.
 * Observers can be added/removed at any point
 ### Disadvantages
 * Can lead to performance issues with a large number of observers having to
