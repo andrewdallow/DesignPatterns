@@ -23,6 +23,14 @@ they are injected as function arguments.
 * They make it difficult to find the dependency chain should you need to analyse
 it. 
 
+### Alternative - Dependency Injection
+An alternate to the singleton is Dependency Injection. This is where you pass 
+an object as an argument to a class constructor or function. Like the Singleton 
+you get a single instance of the class, but with the added benefit of being able 
+to change the instance at runtime. You can also program to an interface instead 
+of a concrete class, thus conforming to the Dependency inversion principle. 
+Testing is also made easier with the ability to you Mock objects. 
+
 ### References
 Freeman, E. 2004. Head First Design Patterns. O'Reilly Media, Inc.
 
