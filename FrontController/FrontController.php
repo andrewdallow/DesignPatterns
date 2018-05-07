@@ -1,8 +1,6 @@
 <?php
 
 namespace FrontController;
-require_once 'Home.php';
-require_once 'Student.php';
 
 interface FrontControllerInterface
 {
@@ -16,6 +14,10 @@ interface FrontControllerInterface
 
 }
 
+/**
+ * Front controller used for redirecting requests from the index page
+ * to controllers specified in the URI.
+ */
 class FrontController implements FrontControllerInterface
 {
     private const DEFAULT_CONTROLLER = '\\' . __NAMESPACE__ . '\\' . 'Home';
