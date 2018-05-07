@@ -9,7 +9,7 @@ existing object.
 When an object is cloned the constructor does not get called again so when
 creating a prototypical class avoid putting any logic in the constructor.
 
-![alt text](https://github.com/andrewdallow/DesignPatterns/blob/master/FrontController/Prototype/prototype.png)
+![alt text](https://github.com/andrewdallow/DesignPatterns/blob/master/Prototype/prototype.png)
 
 
 ### When to use:
