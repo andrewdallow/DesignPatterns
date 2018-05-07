@@ -27,3 +27,7 @@ the Client class which class a Male object and changes the name.
     Prototype: HumanClone
     Concrete Prototype: Male
     Client: Client
+    
+### References:
+Ali, J. 2016. Mastering PHP Design Patterns. Packt Publishing.
+Sanders, W. 2013. Learning PHP Design Patterns. O'Reilly Media, Inc.
