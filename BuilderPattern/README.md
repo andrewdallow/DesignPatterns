@@ -26,7 +26,7 @@ VacationPlanner class which reports back to the client.
     Client: index.php
     Director: VacationPlanner
     Builder: AbstractBuilder and VacationBuilder
-    Object Built: Vacation
+    Object Built: VacationDay
 
 ### References
 Ali, J. 2016. Mastering PHP Design Patterns. Packt Publishing.
