@@ -2,7 +2,7 @@
 The builder pattern is used to encapsulate the construction of a complex object
 and allow it to be constructed in steps. 
 
-![alt text](https://en.wikipedia.org/wiki/Builder_pattern#/media/File:W3sDesign_Builder_Design_Pattern_UML.jpg)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/8/87/W3sDesign_Builder_Design_Pattern_UML.jpg)
 ### Benefits
 * Encapsulates the way a complex object is constructed
 * Allows objects to be constructed in a multi-step and varying process as
