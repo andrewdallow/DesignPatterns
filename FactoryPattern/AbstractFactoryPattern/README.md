@@ -14,7 +14,7 @@ different factories to get different behaviours.
 The example uses the same context of a Pizza Store used in the Factory Method Section.
 This time an abstract factory is used to create the ingredients for a pizza.
 Each Pizza is made from Dough, Sauce, Cheese, Clams, and Veggies. 
-However, each Region creates implements different ingredients for each part
+However, each Region implements different ingredients for each part
 of the pizzas. Thus Each concrete factory represents each region and their
 personalised recipes. 
 
