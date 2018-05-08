@@ -1,6 +1,9 @@
 <?php
 require_once 'VacationPlanner.php';
 
+/**
+ * The Client who request the creation of a vacation day.
+ */
 class Client
 {
     public static function main()

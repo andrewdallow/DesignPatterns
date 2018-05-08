@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class representing the itinerary of one vacation day.
+ */
 class VacationDay
 {
     private $_day;

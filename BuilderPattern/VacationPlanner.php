@@ -2,6 +2,9 @@
 
 require_once 'Builder.php';
 
+/**
+ * The Director for Building a specific Vacation Day.
+ */
 class VacationPlanner
 {
 

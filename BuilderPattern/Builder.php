@@ -1,6 +1,9 @@
 <?php
 require_once 'VacationDay.php';
 
+/**
+ * The abstract builder representing the steps needed to build a vacation.
+ */
 abstract class AbstractBuilder
 {
     abstract public function buildDay(string $date): void;
@@ -17,6 +20,9 @@ abstract class AbstractBuilder
 
 }
 
+/**
+ * Concrete Vacation builder used to create the vacation object.
+ */
 class VacationBuilder extends AbstractBuilder
 {
     /** @var \VacationDay */
