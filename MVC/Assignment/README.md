@@ -14,7 +14,7 @@ This unit converter can be used to convert between any type of units.
   #### How it works:
   1. First we initialise the model LengthConverterModel and set a base value and unit (in this case 1 Metre)
   
-  2. Next we initialise he ConverterController with the model object, then if the 'action' value in the
+  2. Next we initialise the ConverterController with the model object, then if the 'action' value in the
   $_GET global value is set (with a value equal to the controllers 'convert' method name) 
   then the method will be called on the controller with the $_POST global containing the measurement
   amount and corresponding units, this in turn updates the model with a new base value. 
