@@ -1,24 +1,43 @@
 <?php
 /**
- * Example use of the MVC Unit Converter.
+ * Represents a Unit Converter in the Model-View-Controller Pattern
+ *
+ * This unit converter can be used to convert between any type of units.
+ * For example, from metric to imperial units as already implemented here.
+ * It is not limited to just Length conversion, but any converter which
+ * can extend the UnitConverterAbstract class.
+ *
+ * The Converter is designed around the Model-View-Controller Pattern where:
+ *      Model: UnitConverterAbstract, LengthConverterModel
+ *      View: ConverterView
+ *      Controller: ConverterController
+ *
+ * @category   Zend
+ * @package    Zend_MVC
+ * @copyright  Copyright (c) 2018 ecommistry (http://www.ecommistry.com)
+ * @license    http://framework.zend.com/license   BSD License
+ * @version    Release: 1.0
+ * @link       http://framework.zend.com/package/PackageName
  */
 namespace MVC;
 
-include_once 'ConverterMVC.php';
+require_once 'ConverterView.php';
+require_once 'LengthConverterModel.php';
+require_once 'ConverterController.php';
 
 // Initialise Model
-$unitsLength = new LengthConverter();
+$unitsLength = new LengthConverterModel();
 $unitsLength->setBaseValue(1, 'Metre');
 
 //Initialise Controller with model
-$controllerLength = new ControllerConverter($unitsLength);
+$controllerLength = new ConverterController($unitsLength);
 
 // Controller changes model if button pressed
 if (isset($_GET['action'])) {
     $controllerLength->{$_GET['action']}($_POST);
 }
 // View updated with current model
-$viewLength = new ViewConverter($unitsLength, 'Metre');
+$viewLength = new ConverterView($unitsLength, 'Metre');
 
 ?>
 <!doctype html>

@@ -1,17 +1,5 @@
 <?php
-/**
- * Represents a Unit Converter in the Model-View-Controller Pattern
- *
- * This unit converter can be used to convert between any type of units.
- * For example, from metric to imperial units as already implemented here.
- * It is not limited to just Length conversion, but any converter which
- * can extend the UnitConverterAbstract class.
- *
- * The Converter is Designed around the Model-View-Controller Pattern where:
- *      Model: UnitConverterAbstract
- *      View: ViewConverter
- *      Controller: ControllerConverter
- */
+
 
 namespace MVC;
 
@@ -20,8 +8,9 @@ include_once 'UnitConverterAbstract.php';
 /**
  * Represents the View of the Unit converter
  */
-class ViewConverter
+class ConverterView
 {
+    /** @var UnitConverterAbstract  */
     private $_modelConverter;
     private $_unit;
 
@@ -78,29 +67,5 @@ class ViewConverter
             . '</form>';
         return $form;
     }
-
-}
-
-/**
- * Represents the Controller of the Unit Converter.
- */
-class ControllerConverter
-{
-    private $_modelConverter;
-
-    public function __construct(UnitConverterAbstract $converter)
-    {
-        $this->_modelConverter = $converter;
-    }
-
-    public function convert($request): void
-    {
-        if (isset($request['unit'], $request['amount'])) {
-            $this->_modelConverter->setBaseValue(
-                $request['amount'], $request['unit']
-            );
-        }
-    }
-
 
 }
